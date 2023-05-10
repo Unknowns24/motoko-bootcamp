@@ -4,57 +4,69 @@ Canister ID: b3523-riaaa-aaaap-qbffa-cai
 
 # Day 2️⃣
 
-Welcome back for **Day 2!** <br/>
-We're thrilled to see you again and congrats on completing the first day. We hope you've had the opportunity to connect with your teammates and enjoyed the networking session. <br/>
-Today, we'll delve deeper into the Motoko language with two specialized lectures and a new project. Let's dive in!
+# Homework diary 📔
 
-## 🍿 Lectures & events
+On the second day at school, you and your classmates find yourselves diving into your first collaborative assignment. Though working together is stimulating, the challenge of managing responsibilities and progress for each team member becomes quickly apparent... 😩 <br/>
 
-> Be sure to consult the calendar for the precise schedule of each lecture.
+During a lunch break, your group brainstorms solutions for a better system to organize the tasks and assignments. <br/>
 
-| Title                        | Mentor                                                                  | Description                                                                                                          |
-| ---------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Motoko: Array, List & Buffer | <a href="https://twitter.com/mariano_stoll" target="_blank"> Stoll </a> | This lectures covers the datastructures `Array`, `List` & `Buffer` and how to use them.                              |
-| Motoko: Char, Text & Iter    | <a href="https://twitter.com/seb_icp" target="_blank"> Seb </a>         | This lecture covers the types `Char` and `Text` in Motoko and explains how those are linked through the type `Iter`. |
+One of your classmates proposes the idea of creating a homework diary on the famous **Joogle Cloud**, where each member can update tasks and monitor progress. The group quickly agrees and starts building the diary. As you observe the project taking shape, you notice a sly smile forming on the face of one student. 😼 <br/>
 
-## 🧭 Tasks of the day
+The next day, you discover that this cunning student has exploited their access to the API keys, altering the diary to mark all their homework as completed. 🫢 <br/>
 
-> Use this list as a guide for your day, it contains all the material that you need to read and the challenges you need to tackle.
+Shocked and disappointment spread through the group, and you realize that the centralized solution has failed to provide the transparency and security you all craved for.
 
--   Read [Chapter 2: Common programming concepts](../../manuals/chapters/chapter-2/CHAPTER-2.MD).
-    -   [Control flow](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-2/CHAPTER-2.MD#%EF%B8%8F-control-flow)
--   Read [Chapter 3: Primitive Types in Motoko](../../manuals/chapters/chapter-3/CHAPTER-3.MD).
-    -   [Text](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-text)
-    -   [Char](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-char)
-    -   [Unit type](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-unit-type)
--   Read [Chapter 5: Modules and the Base library](../../manuals/chapters/chapter-5/CHAPTER-5.MD) in full.
--   Read [Chapter 6: Storing data in data structures](../../manuals/chapters/chapter-6/CHAPTER-6.MD)
-    -   [Array](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#%EF%B8%8F-array)
-    -   [Buffer](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#-buffer)
-    -   [List](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#-list)
--   Read [Chapter 7: Non-primitives types](../../manuals/chapters/chapter-7/CHAPTER-7.MD).
-    -   [Tuples](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-7/CHAPTER-7.MD#-tuples)
-    -   [Objects](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-7/CHAPTER-7.MD#-objects)
--   Read [Appendix 2: Unlocking the power of DAOs with canister](../../manuals/appendix/appendix-2/APPENDIX-2.MD) in full.
--   Read [Appendix 4: Overview of the NNS](../../manuals/appendix/appendix-4/APPENDIX-4.MD) in full.
--   Read [Appendix 7: Debugging and testing with Motoko](../../manuals/appendix/appendix-7/APPENDIX-7.MD)
-    -   [Debugging](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/appendix/appendix-7/APPENDIX-7.MD#debugging)
--   Complete the [project of the day](./project/README.MD).
+Determined to find a better way, the group gathers once more, and you share the idea of building the collaborative homework diary on the **Internet Computer**. <br/>
+Your classmates' eyes light up as they understand the potential of a decentralized platform to foster transparency, unity, and trust among your classmates. 🫂
 
-## 🎯 Learning objectives
+## 🧑‍🏫 Requirements
 
-> **Before you finish your day**, review the following list and ensure that you have addressed each item on it. It's important that you have a clear understanding of all these concepts. <br/> <i> Why not try explaining them to one of your teammate to gauge your level of understanding? </i>
+Your task is to create a collaborative homework diary, implement as a canister. The homework diary will allow students to create, edit, delete, and view their homework tasks.
 
--   Understand what is a [module](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-5/CHAPTER-5.MD#-modules).
--   Understand what is the [base library](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-5/CHAPTER-5.MD#-the-base-library), [how to use it](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-5/CHAPTER-5.MD#importing-from-the-base-library) and where to find the [source code](https://github.com/dfinity/motoko-base).
--   Understand how to use the [Debug module](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/appendix/appendix-7/APPENDIX-7.MD#debugging) to test your code locally.
--   Understand how to manipulate [control flow operators](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-2/CHAPTER-2.MD#%EF%B8%8F-control-flow) in Motoko: `if`, `else`, `for`, `while`, `switch/case`
--   Getting familiar with more primitive types in Motoko: `Text`, `Char` & the unit type.
--   Getting familiar with simple data structures in Motoko: [Array](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#%EF%B8%8F-array) , [List](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#-list) & [Buffer](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-6/CHAPTER-6.MD#-buffer).
--   Getting familiar with more advanced types: [Tuples](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-7/CHAPTER-7.MD#-tuples) and [Objects](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-7/CHAPTER-7.MD#-objects).
--   Understanding [what is DAO](../../manuals/appendix/appendix-2/APPENDIX-2.MD), how it can be used and how the Internet Computer enables new innovative usecases for those organisations.
--   Becoming familiar with an important DAO on the Internet Computer: the [Network Nervous System](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/appendix/appendix-4/APPENDIX-4.MD).
+## 📒 Steps
 
-> Before deciding to call it **Motoko**, the language developed by **DFINITY** was actually called **ActorScript**.
+We import the type `Time` for the `Time` library.
 
-Good luck 🍀
+1. Define a record type `Homework` that represents a homework task. A Homework has a title field of type `Text`, a description field of type `Text`, a dueDate field of type `Time`, and a completed field of type `Bool`.
+2. Define a variable called `homeworkDiary` that will be used to store the homework tasks. Use a suitable data structure (such as `Buffer` or `Array`) for this variable.
+3. Implement `addHomework`, which accepts a homework of type `Homework`, adds the homework to the `homeworkDiary`, and returns the id of the homework. The id should correspond to the index of the homework in `homeworkDiary`.
+4. Implement `getHomework`, which accepts a homeworkId of type `Nat`, and returns the corresponding homework wrapped in an Ok result. If the homeworkId is invalid, the function should return an error message wrapped in an `Err` result.
+5. Implement `updateHomework`, which accepts a homeworkId of type `Nat` and a homework of type `Homework`, updates the corresponding homework in `homeworkDiary`, and returns a unit value wrapped in an `Ok` result. If the homeworkId is invalid, the function should return an error message wrapped in an `Err` result.
+6. Implement `markAsComplete`, which accepts a homeworkId of type `Nat` and updates the completed field of the corresponding homework to `true`, and returns a unit value wrapped in an `Ok` result. If the `homeworkId` is invalid, the function should return an error message wrapped in an `Err` result.
+7. Implement `deleteHomework`, which accepts a `homeworkId` of type `Nat`, removes the corresponding homework from the `homeworkDiary`, and returns a unit value wrapped in an `Ok` result. If the `homeworkId` is invalid, the function should return an error message wrapped in an `Err` result.
+8. Implement `getAllHomework`, which returns the list of all homework tasks in `homeworkDiary`.
+9. Implement `getPendingHomework` which returns the list of all uncompleted homework tasks in `homeworkDiary`.
+10. Implement a `searchHomework` query function that accepts a `searchTerm` of type `Text` and returns a list of homework tasks that have the given `searchTerm` in their title or description.
+11. Deploy the howework diary on the Internet Computer.
+
+## 📺 Interface
+
+> At the end of the project, your canister should implement the following interface.
+
+```motoko
+actor {
+    // Add a new homework task
+    addHomework: shared (homework: Homework) -> async Nat;
+
+    // Get a specific homework task by id
+    getHomework: shared query (id: Nat) -> async Result.Result<Homework, Text>;
+
+    // Update a homework task's title, description, and/or due date
+    updateHomework: shared (id: Nat, homework: Homework) -> async Result.Result<(), Text>;
+
+    // Mark a homework task as completed
+    markAsCompleted: shared (id: Nat) -> async Result.Result<(), Text>;
+
+    // Delete a homework task by id
+    deleteHomework: shared (id: Nat) -> async Result.Result<(), Text>;
+
+    // Get the list of all homework tasks
+    getAllHomework: shared query () -> async [Homework];
+
+    // Get the list of pending (not completed) homework tasks
+    getPendingHomework: shared query () -> async [Homework];
+
+    // Search for homework tasks based on a search terms
+    searchHomework: shared query (searchTerm: Text) -> async [Homework];
+}
+```

@@ -4,50 +4,47 @@ Canister ID: arsyb-tyaaa-aaaap-qbfca-cai
 
 # Day 1️⃣
 
-Welcome to the elite [Motoko School](https://twitter.com/MotokoSchool), where talented minds like yours gather to learn and master the art of programming on the **Internet Computer**. ♾️ <br/>  
-Today marks your exciting first day, and while it may be intense, take the chance to bond with your teammates and brace yourself for the adventure ahead. Don't worry if you fall behind; allow yourself the time needed to grasp the material. Keep in mind that 7 days is a brief period to learn everything there is to know about Web 3.0 and the Internet Computer. All resources will be available after the week is over, so you can catch-up on anything you've missed. <br/>
-Above all, the most vital aspect of the Bootcamp is to have fun and build connections - let's learn and grow together. 💪
+# Calculator ➕✖️➖➗
 
-## 🍿 Lectures & events
+On your first day of class, you enter the halls, eager to embark on the journey of a lifetime. Little do you know that you have forgotten to bring one essential tool to class — a **calculator**. 😳 <br/>
 
-> Be sure to consult the calendar for the precise schedule of each lecture.
+Your professor, a renowned expert in the community, begins the day's lesson by presenting a series of complex mathematical problems that require the use of a calculator. The students around you huddle together, pulling out their calculators to tackle the challenge. 💪 <br/>
 
-| Title                                  | Mentor                                                               | Description                                                                                                                                                                                      |
-| -------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Kick Off 🎉                            | <a href="https://twitter.com/seb_icp" target="_blank"> Seb </a>      | Welcome to Motoko Bootcamp!                                                                                                                                                                      |
-| Anatomy of a Motoko project            | <a href="https://twitter.com/seb_icp" target="_blank"> Seb </a>      | This lecture covers the sample project deployed with `dfx`, and provides guidance on how to navigate its structure and use each file effectively, as well as how to deploy and manage canisters. |
-| Variables, types, loops and functions. | <a href="https://twitter.com/tedreinhardt" target="_blank"> Ted </a> | This lecture explores the fundamentals of the Motoko language, including variables, types, functions, and loops.                                                                                 |
+As you search your bag in vain for your calculator, you realize that you have inadvertently left it behind. Instead of panicking or admitting defeat, your resourceful nature kicks in. You decide to rely on your intelligence and aptitude in Motoko to create your own calculator. 🧑‍💻
 
-## 🧭 Tasks of the day
+## 🧑‍🏫 Requirements
 
-> Use this list as a guide for your day, it contains all the material that you need to read and the challenges you need to tackle.
+Your task is to create the code for a **calculator**, which is implemented as a canister.
+<br/> The canister should have a public interface that allows users to perform calculations. The canister has a memory variable called `counter` which represents the result of the most recent calculation.
 
--   Read [Chapter 1 : Fundamental concepts](../../manuals/chapters/chapter-1/CHAPTER-1.MD) in full.
--   Read [Chapter 2: Common programming concepts](../../manuals/chapters/chapter-2/CHAPTER-2.MD).
-    -   [Variables](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-2/CHAPTER-2.MD#-variables)
-    -   [Comments](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-2/CHAPTER-2.MD#-comments)
-    -   [Functions](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-2/CHAPTER-2.MD#%EF%B8%8F-functions)
--   Read [Chapter 3: Primitive Types in Motoko](../../manuals/chapters/chapter-3/CHAPTER-3.MD).
-    -   [Nat](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-nat)
-    -   [Int](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-int)
-    -   [Bool](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-bool)
-    -   [Float](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#float)
--   Read [Chapter 4: Candid the language of the Internet Computer](../../manuals/chapters/chapter-4/CHAPTER-4.MD) in full.
--   Read [Appendix 1: Deploying & managing canisters](../../manuals/appendix/appendix-1/APPENDIX-1.MD#) in full.
--   Complete the [project of the day](./project/README.MD).
+## 📒 Steps
 
-## 🎯 Learning objectives
+1. Define a mutable variable called `counter` of type `Float` that will be used to store the result of the most recent calculation.
+2. Implement `add`, which accepts a value `x` of type `Float` and performs addition.
+3. Implement `sub`, which accepts a value `x` of type `Float` and performs subtraction.
+4. Implement `mul`, which accepts a value `x` of type `Float` and performs multiplication.
+5. Implement `div`, which accepts a value `x` of type `Float` and performs division. Make sure to guard against division by 0.
+6. Implement `reset`, which reset the value of `counter` by setting its value to zero.
+7. Implement a `query` function `see` that returns the value of `counter`.
+8. Implement `power`, which accepts a value `x` of type `Float` and returns the value of `counter` to the power of `x`.
+9. Implement `sqrt`, which returns the square root of `counter`.
+10. Implement `floor`, which returns the largest integer less than or equal to `counter`.
+11. Deploy the `Calculator` on the Internet Computer.
 
-> **Before you finish your day**, review the following list and ensure that you have addressed each item on it. It's important that you have a clear understanding of all these concepts. <br/> <i> Why not try explaining them to one of your teammate to gauge your level of understanding? </i>
+## 📺 Interface
 
--   Understand what is a [canister](../../manuals/chapters/chapter-1/CHAPTER-1.MD#what-is-a-canister) and how it relates to the concept of an [actor](../../manuals/chapters/chapter-1/CHAPTER-1.MD#the-actor-model).
--   Understand the concept of [cycles](../../manuals/chapters/chapter-1/CHAPTER-1.MD#fuel-on-the-internet-computer-cycles) & being able to top-up acanister.
--   Understand the difference between [update and query](../../manuals/chapters/chapter-1/CHAPTER-1.MD#update-vs-query) calls.
--   Understand the differences between [a variable](../../manuals/chapters/chapter-2/CHAPTER-2.MD#📦-variables) declared with let & var.
--   Understand what is [Candid](../../manuals/chapters/chapter-4/CHAPTER-4.MD#chapter-4-candid-the-language-of-the-internet-computer) & how to use the [Candid UI](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-4/CHAPTER-4.MD#--candid-ui-) to interact with your API.
--   Understand that Motoko is a typed language and become familiar with the basic types: [Nat](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-nat), [Int](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-int) & [Bool](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-3/CHAPTER-3.MD#-bool).
--   Being comfortable deploying, managing and interacting with canisters through [dfx](https://github.com/motoko-bootcamp/motoko-starter/blob/main/manuals/chapters/chapter-4/CHAPTER-4.MD#--using-the-terminal-dfx-).
+> At the end of the project, your canister should implement the following interface.
 
-> The first edition of Motoko Bootcamp was run in March 2022, fully online.
-
-Good luck 🍀
+```motoko
+actor {
+    add : shared(x : Float) -> async Float;
+    sub : shared(x : Float) -> async Float;
+    mul : shared(x : Float) -> async Float;
+    div : shared(x : Float) -> async Float;
+    reset: shared () -> async ();
+    see: shared query () -> async Float;
+    power: shared (x : Float) -> async Float;
+    sqrt: shared () -> async Float;
+    floor: shared () -> async Int;
+};
+```
