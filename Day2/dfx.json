@@ -1,0 +1,8 @@
+{
+	"canisters": {
+		"HWDiary": {
+			"main": "main.mo",
+			"type": "motoko"
+		}
+	}
+}
