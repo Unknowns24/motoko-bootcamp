@@ -2,7 +2,6 @@
 import Text "mo:base/Text";
 import Time "mo:base/Time";
 import Buffer "mo:base/Buffer";
-import Debug "mo:base/Debug";
 import Result "mo:base/Result";
 
 actor HomeworkDiary {
