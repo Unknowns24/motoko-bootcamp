@@ -1,0 +1,50 @@
+type Survey = 
+ record {
+   answers: vec Answer;
+   title: text;
+ };
+type StudentWall = 
+ service {
+   deleteMessage: (nat) -> (Result);
+   downVote: (nat) -> (Result);
+   getAllMessages: () -> (vec Message);
+   getAllMessagesRanked: () -> (vec Message);
+   getMessage: (nat) -> (Result_1) query;
+   upVote: (nat) -> (Result);
+   updateMessage: (nat, Content) -> (Result);
+   writeMessage: (Content) -> (nat);
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok: Message;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type Message = 
+ record {
+   content: Content__1;
+   creator: principal;
+   vote: int;
+ };
+type Content__1 = 
+ variant {
+   Image: blob;
+   Survey: Survey;
+   Text: text;
+ };
+type Content = 
+ variant {
+   Image: blob;
+   Survey: Survey;
+   Text: text;
+ };
+type Answer = 
+ record {
+   text;
+   nat;
+ };
+service : () -> StudentWall
