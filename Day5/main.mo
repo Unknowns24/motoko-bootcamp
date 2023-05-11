@@ -124,19 +124,19 @@ actor class Verifier() {
 
 
   // STEP 3 - BEGIN
-  public func verifyOwnership(canisterId : Principal, p : Principal) : async Result.Result<Bool, Text> {
+  public func verifyOwnership(canisterId : Principal, p : Principal) : async Bool {
     try {
       let controllers = await Ic.getCanisterControllers(canisterId);
 
       var isOwner : ?Principal = Array.find<Principal>(controllers, func prin = prin == p);
       
       if (isOwner != null) {
-        return #ok true;
+        return true;
       };
 
-      return #ok false;
+      return false;
     } catch (e) {
-      return #err (Error.message(e));
+      return false;
     }
   };
 
@@ -147,6 +147,12 @@ actor class Verifier() {
 
       if (isApproved != #ok) {
         return #err("The current work has no passed the tests");
+      };
+
+      let isOwner = await verifyOwnership(canisterId, p); 
+
+      if (not isOwner) {
+        return #err ("The received work owner does not match with the received principal");
       };
 
       var xProfile : ?StudentProfile = studentProfileStore.get(p);

@@ -3,9 +3,7 @@ import type { ActorMethod } from '@dfinity/agent';
 
 export type Result = { 'ok' : null } |
   { 'err' : string };
-export type Result_1 = { 'ok' : boolean } |
-  { 'err' : string };
-export type Result_2 = { 'ok' : StudentProfile } |
+export type Result_1 = { 'ok' : StudentProfile } |
   { 'err' : string };
 export interface StudentProfile {
   'graduate' : boolean,
@@ -19,10 +17,10 @@ export type TestResult = { 'ok' : null } |
 export interface Verifier {
   'addMyProfile' : ActorMethod<[StudentProfile], Result>,
   'deleteMyProfile' : ActorMethod<[], Result>,
-  'seeAProfile' : ActorMethod<[Principal], Result_2>,
+  'seeAProfile' : ActorMethod<[Principal], Result_1>,
   'test' : ActorMethod<[Principal], TestResult>,
   'updateMyProfile' : ActorMethod<[StudentProfile], Result>,
-  'verifyOwnership' : ActorMethod<[Principal, Principal], Result_1>,
+  'verifyOwnership' : ActorMethod<[Principal, Principal], boolean>,
   'verifyWork' : ActorMethod<[Principal, Principal], Result>,
 }
 export interface _SERVICE extends Verifier {}

@@ -2,10 +2,10 @@ type Verifier =
  service {
    addMyProfile: (StudentProfile) -> (Result);
    deleteMyProfile: () -> (Result);
-   seeAProfile: (principal) -> (Result_2) query;
+   seeAProfile: (principal) -> (Result_1) query;
    test: (principal) -> (TestResult);
    updateMyProfile: (StudentProfile) -> (Result);
-   verifyOwnership: (principal, principal) -> (Result_1);
+   verifyOwnership: (principal, principal) -> (bool);
    verifyWork: (principal, principal) -> (Result);
  };
 type TestResult = 
@@ -24,15 +24,10 @@ type StudentProfile =
    name: text;
    team: text;
  };
-type Result_2 = 
- variant {
-   err: text;
-   ok: StudentProfile;
- };
 type Result_1 = 
  variant {
    err: text;
-   ok: bool;
+   ok: StudentProfile;
  };
 type Result = 
  variant {
