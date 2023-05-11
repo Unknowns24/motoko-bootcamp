@@ -102,14 +102,18 @@ actor class MotoCoin() {
 
   // Airdrop 100 MotoCoin to any student that is part of the Bootcamp.
   public func airdrop() : async Result.Result<(), Text> {
-    var students : [Principal] = await RemoteCanisterActor.RemoteActor.getAllStudentsPrincipal();
-    
-    for (student in students.vals()) {
-      var studentAccount = {owner = student; subaccount = null};
-      await addBalance(studentAccount, 100);
-      coinData.supply += 100;
+    try {
+      var students : [Principal] = await RemoteCanisterActor.RemoteActor.getAllStudentsPrincipal();
+
+      for (student in students.vals()) {
+        var studentAccount = {owner = student; subaccount = null};
+        await addBalance(studentAccount, 100);
+        coinData.supply += 100;
+      };
+
+      return #ok ();
+    } catch (e) {
+      return #err "Something went wrong!";
     };
-    
-    return #ok ();
   };
 };
